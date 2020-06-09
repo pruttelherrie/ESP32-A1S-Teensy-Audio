@@ -9,6 +9,7 @@
 #include "control_i2s.h"
 #include "effect_delay_ext.h"
 #include "effect_biquad.h"
+#include "effect_chorus.h"
 
 #define CODEC_SCK       (GPIO_NUM_32)
 #define CODEC_SDA       (GPIO_NUM_33)
@@ -29,13 +30,15 @@ AudioControlAC101        ac101;
 // GUItool: begin automatically generated code
 AudioInputI2S            i2s1;           //xy=98,278
 AudioMixer4              mixer2;         //xy=354,358
+AudioEffectChorus        chorus1;
 AudioFilterBiquad        biquad1;        //xy=514,468
 AudioEffectDelayExternal         delay1;         //xy=660,364
 AudioAmplifier           amp2;           //xy=727,58
 AudioAmplifier           amp1;           //xy=816,328
 AudioMixer4              mixer1;         //xy=984,273
 AudioOutputI2S           i2s2;           //xy=1220,258
-AudioConnection          patchCord1(i2s1, 1, mixer1, 0);
+AudioConnection          patchCord1(i2s1, 1, chorus1, 0);
+AudioConnection          patchCord10(chorus1,0, mixer1,0);
 AudioConnection          patchCord2(i2s1, 1, mixer2, 1);
 AudioConnection          patchCord3(mixer2, biquad1);
 AudioConnection          patchCord4(biquad1, delay1);
@@ -59,15 +62,19 @@ void audioTask( void * parameter ) {
   }
 }
 
+float *chorusdelay;
+
 void setup() {
     Serial.begin(115200);
     AudioMemory(40); 
+    chorusdelay=(float *)malloc(1200 * sizeof(float));
 
     amp1.gain(0.7);
     amp2.gain(0.4);
     delay1.initialize(100990); 
     delay1.delay(0,2290);
     biquad1.lowpass( 1000.0, 2.0);
+    chorus1.begin(chorusdelay,40,2);
 
     ESP_LOGI(TAG, "I2C");
     if(ac101.begin(CODEC_SDA, CODEC_SCK)) 
