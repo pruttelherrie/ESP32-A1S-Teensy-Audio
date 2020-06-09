@@ -15,7 +15,7 @@ typedef struct {
 	float xn2;
 	float yn1;
 	float yn2;
-} sf_biquad_state_st;
+} biquad_state_st;
 
 class AudioFilterBiquad : public AudioStream
 {
@@ -39,7 +39,7 @@ private:
     void state_passthrough();
     void state_zero();
 	audio_block_t *inputQueueArray[1];
-    sf_biquad_state_st biquadState;
+    biquad_state_st biquadState;
 };
 
 #endif
