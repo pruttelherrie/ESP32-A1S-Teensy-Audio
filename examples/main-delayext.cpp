@@ -1,5 +1,7 @@
 // Example: delay in SPIRAM, with lowpass and feedback
 
+// Move this file to /src/main.cpp , compile & upload.
+
 #include "Arduino.h"
 #include "Audio.h"
 #include <stdio.h>
