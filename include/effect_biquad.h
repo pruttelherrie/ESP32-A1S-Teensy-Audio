@@ -24,12 +24,12 @@ public:
 
     void lowpass( float cutoff, float resonance);
     void highpass( float cutoff, float resonance);
-    void bandpass ( int rate, float freq, float Q);
-    void notch    ( int rate, float freq, float Q);
-    void peaking  ( int rate, float freq, float Q, float gain);
-    void allpass  ( int rate, float freq, float Q);
-    void lowshelf ( int rate, float freq, float Q, float gain);
-    void highshelf( int rate, float freq, float Q, float gain);
+    void bandpass ( float freq, float Q);
+    void notch    ( float freq, float Q);
+    void peaking  ( float freq, float Q, float gain);
+    void allpass  ( float freq, float Q);
+    void lowshelf ( float freq, float Q, float gain);
+    void highshelf( float freq, float Q, float gain);
     
 	virtual void update(void);
 

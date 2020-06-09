@@ -15,6 +15,6 @@ Tested/Working blocks so far:
 * amp
 * delay
 * delay_ext
-* biquad (lowpass, highpass)
+* biquad
 
 To get going: download, add to PlatformIO, copy an example from the examples folder to /src/main.cpp, upload & play!
