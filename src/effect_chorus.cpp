@@ -71,7 +71,7 @@ void AudioEffectChorus::update(void)
 {
   audio_block_t *block;
   float *bp;
-  int sum;
+  float sum;
   int c_idx;
 
   if(l_delayline == NULL)return;
@@ -124,7 +124,7 @@ void AudioEffectChorus::update(void)
     // transmit the block
     transmit(block,0);
     release(block);
-  }
+  } 
 }
 
 
