@@ -6,7 +6,7 @@ Example code for BlackStomp: https://github.com/hamuro80/blackstomp
 Use the Teensy Audio Library GUI for creating algorithms: https://www.pjrc.com/teensy/gui/
 
 Working blocks so far:
-* I2S input & output
+* I2S input & output (AC101 codec)
 * mixer
 * amp
 * delay
