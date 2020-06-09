@@ -6,7 +6,7 @@
  Use the Teensy Audio Library GUI for creating algorithms:
 https://www.pjrc.com/teensy/gui/
 
-Working modules so far:
+Working blocks so far:
 * I2S input & output
 * mixer
 * amp
