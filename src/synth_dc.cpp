@@ -1,6 +1,6 @@
 #include "synth_dc.h"
 
-void IRAM_ATTR AudioSynthWaveformDC::update(void)
+void IRAM_ATTR AudioSynthWaveformDc::update(void)
 {
 	audio_block_t *block;
 

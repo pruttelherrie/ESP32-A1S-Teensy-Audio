@@ -35,7 +35,7 @@
 #include <string.h> // for memcpy
 #include <inttypes.h>
 
-#define AUDIO_BLOCK_SAMPLES  32
+#define AUDIO_BLOCK_SAMPLES  128
 #define AUDIO_SAMPLE_RATE_EXACT 44100
 #define AUDIO_SAMPLE_RATE AUDIO_SAMPLE_RATE_EXACT
 

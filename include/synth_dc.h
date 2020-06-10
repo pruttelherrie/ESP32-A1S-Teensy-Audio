@@ -4,12 +4,12 @@
 #include "AudioStream.h"
 #include "freertos/FreeRTOS.h"
 
-class AudioSynthWaveformDC : public AudioStream
+class AudioSynthWaveformDc : public AudioStream
 {
 //GUI: inputs:0, outputs:1 //this line used for automatic generation of GUI node
 //GUI: shortName:dc  //this line used for automatic generation of GUI node
 public:
-	AudioSynthWaveformDC() : AudioStream(0, NULL, "AudioSynthWaveformDC"), dcValue(0.0) { initialised = true; }
+	AudioSynthWaveformDc() : AudioStream(0, NULL, "AudioSynthWaveformDC"), dcValue(0.0) { initialised = true; }
 	virtual void update(void);
     void value(float n) {
 		if (n < -1.0f) n = -1.0f;

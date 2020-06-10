@@ -1,5 +1,5 @@
-#ifndef Audio_h_
-#define Audio_h_
+//#ifndef Audio_h_
+//#define Audio_h_
 
 // include all the library headers, so a sketch can use a single
 // #include <Audio.h> to get the whole library
@@ -11,6 +11,7 @@
 #include "effect_calibration.h"
 #include "effect_compressor.h"
 #include "effect_delay.h"
+#include "effect_delay_ext.h"
 #include "effect_envelope.h"
 #include "effect_multiply.h"
 #include "input_i2s.h"
@@ -21,4 +22,4 @@
 #include "synth_dc.h"
 #include "synth_sine.h"
 
-#endif
+//#endif
