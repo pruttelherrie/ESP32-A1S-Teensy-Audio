@@ -16,5 +16,6 @@ Tested/Working blocks so far:
 * delay
 * delay_ext
 * biquad
+* waveform
 
-To get going: download, add to PlatformIO, copy an example from the examples folder to /src/main.cpp, upload & play!
+To get up&running: download, add to PlatformIO, copy an example from the examples folder to /src/, compile, upload & play!
